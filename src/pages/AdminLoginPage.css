@@ -1,0 +1,189 @@
+/* ─── Admin Login Page ─────────────────────────────────────────── */
+.admin-login-page {
+  min-height: 100vh;
+  background: #0a0b14;
+  display: flex;
+  align-items: stretch;
+  position: relative;
+  overflow: hidden;
+  font-family: "Inter", "Outfit", sans-serif;
+}
+
+/* Background orbs */
+.al-bg-orbs { position: fixed; inset: 0; pointer-events: none; z-index: 0; }
+.al-orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  opacity: 0.18;
+}
+.al-orb-1 { width: 500px; height: 500px; background: #f59e0b; top: -120px; left: -100px; }
+.al-orb-2 { width: 400px; height: 400px; background: #ef4444; bottom: -100px; right: -80px; }
+.al-orb-3 { width: 300px; height: 300px; background: #8b5cf6; top: 40%; left: 35%; opacity: 0.12; }
+
+/* Grid layout */
+.al-grid {
+  position: relative; z-index: 1;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 100%;
+}
+
+/* ─── Left brand panel ─────────────────────────────────────────── */
+.al-brand {
+  background: linear-gradient(135deg, rgba(245,158,11,0.12) 0%, rgba(239,68,68,0.08) 100%);
+  border-right: 1px solid rgba(245,158,11,0.15);
+  padding: 60px 48px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 28px;
+}
+
+.al-brand-logo {
+  width: 64px; height: 64px;
+  background: linear-gradient(135deg, #f59e0b, #ef4444);
+  border-radius: 18px;
+  display: flex; align-items: center; justify-content: center;
+  color: #fff;
+  box-shadow: 0 8px 32px rgba(245,158,11,0.35);
+}
+
+.al-brand-title {
+  font-size: 2.4rem;
+  font-weight: 800;
+  color: #fff;
+  line-height: 1.1;
+}
+
+.al-brand-tagline {
+  color: rgba(255,255,255,0.5);
+  font-size: 0.95rem;
+  margin-top: -16px;
+}
+
+.al-brand-features { display: flex; flex-direction: column; gap: 14px; }
+.al-brand-feature {
+  display: flex; align-items: center; gap: 14px;
+  color: rgba(255,255,255,0.75);
+  font-size: 0.9rem;
+}
+.al-feature-icon { font-size: 1.15rem; }
+
+.al-deco { margin-top: 24px; }
+.al-deco-card {
+  display: inline-flex; align-items: center; gap: 12px;
+  background: rgba(245,158,11,0.1);
+  border: 1px solid rgba(245,158,11,0.25);
+  border-radius: 14px;
+  padding: 14px 20px;
+}
+.al-deco-icon { font-size: 1.3rem; }
+.al-deco-text { color: rgba(255,255,255,0.7); font-size: 0.88rem; font-weight: 500; }
+
+/* ─── Right form panel ─────────────────────────────────────────── */
+.al-form-panel {
+  display: flex; align-items: center; justify-content: center;
+  padding: 60px 48px;
+}
+
+.al-form-card {
+  width: 100%; max-width: 420px;
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 24px;
+  padding: 40px 36px;
+  backdrop-filter: blur(20px);
+}
+
+.al-form-header { text-align: center; margin-bottom: 32px; }
+.al-form-badge {
+  width: 52px; height: 52px;
+  background: linear-gradient(135deg, #f59e0b, #ef4444);
+  border-radius: 16px;
+  display: flex; align-items: center; justify-content: center;
+  color: #fff; margin: 0 auto 16px;
+  box-shadow: 0 6px 24px rgba(245,158,11,0.3);
+}
+.al-form-header h2 { font-size: 1.5rem; font-weight: 700; color: #fff; margin-bottom: 6px; }
+.al-form-header p  { color: rgba(255,255,255,0.45); font-size: 0.85rem; }
+
+/* Form fields */
+.al-form-body { display: flex; flex-direction: column; gap: 20px; }
+.al-form-field { display: flex; flex-direction: column; gap: 8px; }
+.al-form-field label { font-size: 0.82rem; font-weight: 600; color: rgba(255,255,255,0.65); letter-spacing: 0.04em; text-transform: uppercase; }
+
+.al-input-wrapper {
+  position: relative; display: flex; align-items: center;
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 12px; overflow: hidden;
+  transition: border-color 0.2s;
+}
+.al-input-wrapper:focus-within { border-color: rgba(245,158,11,0.5); }
+
+.al-input-icon {
+  position: absolute; left: 14px; width: 17px; height: 17px;
+  stroke: rgba(255,255,255,0.35); pointer-events: none;
+}
+.al-input-wrapper input {
+  width: 100%; padding: 13px 44px 13px 42px;
+  background: transparent; border: none; outline: none;
+  color: #fff; font-size: 0.92rem;
+}
+.al-input-wrapper input::placeholder { color: rgba(255,255,255,0.3); }
+.al-toggle-pass {
+  position: absolute; right: 12px;
+  background: none; border: none; cursor: pointer;
+  color: rgba(255,255,255,0.35); padding: 4px;
+  display: flex; transition: color 0.2s;
+}
+.al-toggle-pass:hover { color: rgba(255,255,255,0.7); }
+.al-toggle-pass svg { width: 17px; height: 17px; }
+
+/* Error box */
+.al-error-box {
+  display: flex; align-items: center; gap: 10px;
+  background: rgba(239,68,68,0.12);
+  border: 1px solid rgba(239,68,68,0.3);
+  border-radius: 10px; padding: 12px 14px;
+  color: #fca5a5; font-size: 0.85rem;
+}
+.al-error-box svg { width: 16px; height: 16px; flex-shrink: 0; }
+
+/* Submit button */
+.al-submit-btn {
+  display: flex; align-items: center; justify-content: center; gap: 10px;
+  width: 100%; padding: 14px;
+  background: linear-gradient(135deg, #f59e0b, #ef4444);
+  border: none; border-radius: 12px;
+  color: #fff; font-size: 0.95rem; font-weight: 700;
+  cursor: pointer; letter-spacing: 0.02em;
+  transition: opacity 0.2s, transform 0.15s, box-shadow 0.2s;
+  box-shadow: 0 6px 24px rgba(245,158,11,0.25);
+}
+.al-submit-btn:hover:not(:disabled) { opacity: 0.92; transform: translateY(-1px); }
+.al-submit-btn:disabled { opacity: 0.55; cursor: not-allowed; }
+.al-submit-btn svg { width: 17px; height: 17px; }
+
+/* Spinner */
+.al-spinner {
+  width: 20px; height: 20px;
+  border: 2.5px solid rgba(255,255,255,0.25);
+  border-top-color: #fff;
+  border-radius: 50%;
+  animation: al-spin 0.7s linear infinite;
+}
+@keyframes al-spin { to { transform: rotate(360deg); } }
+
+/* Back link */
+.al-back-link { margin-top: 24px; text-align: center; }
+.al-back-link a { color: rgba(255,255,255,0.4); font-size: 0.85rem; text-decoration: none; transition: color 0.2s; }
+.al-back-link a:hover { color: #f59e0b; }
+
+/* ─── Responsive ──────────────────────────────────────────────── */
+@media (max-width: 768px) {
+  .al-grid { grid-template-columns: 1fr; }
+  .al-brand { display: none; }
+  .al-form-panel { padding: 40px 24px; }
+}

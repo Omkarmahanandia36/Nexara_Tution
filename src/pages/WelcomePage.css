@@ -1,0 +1,220 @@
+.welcome-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #0f172a;
+  color: white;
+  position: relative;
+  overflow: hidden;
+  font-family: "Inter", sans-serif;
+  padding: 2rem;
+}
+
+.welcome-bg {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  overflow: hidden;
+  z-index: 0;
+}
+
+.w-orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(100px);
+  opacity: 0.4;
+  animation: w-float 20s infinite alternate ease-in-out;
+}
+
+.w-orb-1 {
+  width: 50vw; height: 50vw;
+  max-width: 600px; max-height: 600px;
+  background: #3b82f6;
+  top: -10%; right: -10%;
+}
+
+.w-orb-2 {
+  width: 40vw; height: 40vw;
+  max-width: 500px; max-height: 500px;
+  background: #8b5cf6;
+  bottom: -10%; left: -10%;
+  animation-delay: -10s;
+}
+
+@keyframes w-float {
+  0% { transform: translate(0, 0) scale(1); }
+  100% { transform: translate(50px, 50px) scale(1.1); }
+}
+
+.welcome-content {
+  position: relative;
+  z-index: 1;
+  max-width: 800px;
+  width: 100%;
+  text-align: center;
+}
+
+.quote-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.quote-icon {
+  font-size: 6rem;
+  line-height: 1;
+  color: #60a5fa;
+  font-family: serif;
+  margin-bottom: -3rem;
+  opacity: 0.8;
+}
+
+.welcome-quote {
+  font-size: 2.25rem;
+  font-weight: 300;
+  line-height: 1.4;
+  margin: 0;
+  color: #f8fafc;
+  max-width: 700px;
+}
+
+.welcome-author {
+  font-size: 1.1rem;
+  color: #94a3b8;
+  font-style: italic;
+}
+
+.get-started-btn {
+  margin-top: 2rem;
+  padding: 1rem 2.5rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #fff;
+  background: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%);
+  border: none;
+  border-radius: 9999px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 10px 25px -5px rgba(59, 130, 246, 0.4);
+}
+
+.get-started-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 20px 25px -5px rgba(59, 130, 246, 0.6);
+}
+
+.get-started-btn svg {
+  width: 24px; height: 24px;
+  transition: transform 0.3s;
+}
+
+.get-started-btn:hover svg {
+  transform: translateX(4px);
+}
+
+.options-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.options-section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+  color: #f8fafc;
+  font-weight: 700;
+}
+
+.options-section p {
+  color: #94a3b8;
+  font-size: 1.1rem;
+  margin-bottom: 3rem;
+}
+
+.role-cards {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+.role-card {
+  background: rgba(30, 41, 59, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  padding: 2.5rem 2rem;
+  flex: 1;
+  min-width: 280px;
+  max-width: 340px;
+  cursor: pointer;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  backdrop-filter: blur(12px);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.role-card:hover {
+  transform: translateY(-10px);
+  background: rgba(30, 41, 59, 0.9);
+  border-color: rgba(96, 165, 250, 0.5);
+  box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.5);
+}
+
+.role-icon {
+  font-size: 3.5rem;
+  margin-bottom: 0.5rem;
+  transition: transform 0.3s;
+  line-height: 1;
+}
+
+.role-card:hover .role-icon {
+  transform: scale(1.1) rotate(5deg);
+}
+
+.role-card h3 {
+  font-size: 1.5rem;
+  color: #fff;
+  margin: 0;
+  font-weight: 600;
+}
+
+.role-card p {
+  font-size: 0.95rem;
+  color: #cbd5e1;
+  margin: 0;
+  line-height: 1.5;
+}
+
+.back-btn {
+  margin-top: 3rem;
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #e2e8f0;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  padding: 0.75rem 1.5rem;
+  border-radius: 9999px;
+  transition: all 0.2s;
+}
+
+.back-btn:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.4);
+}
+
+@media (max-width: 768px) {
+  .welcome-quote { font-size: 1.75rem; }
+  .quote-icon { font-size: 4rem; margin-bottom: -1.5rem; }
+  .role-cards { flex-direction: column; align-items: center; gap: 1.5rem; }
+  .role-card { min-width: unset; width: 100%; max-width: 100%; }
+  .options-section h2 { font-size: 2rem; }
+}
