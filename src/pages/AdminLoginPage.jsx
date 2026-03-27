@@ -55,7 +55,7 @@ export default function AdminLoginPage() {
             </svg>
           </div>
           <h1 className="al-brand-title">Admin Panel</h1>
-          <p className="al-brand-tagline">Sovan Tuition — Content Management</p>
+          <p className="al-brand-tagline">NEXT-GEN SCHOLARS — Content Management</p>
 
           <div className="al-brand-features">
             {[

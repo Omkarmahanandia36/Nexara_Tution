@@ -1,6 +1,6 @@
-# Sovan Tuition Portal
+# NEXT-GEN SCHOLARS Portal
 
-Welcome to the **Sovan Tuition Portal** (Nexara_Tution), a modern, React-based web application designed to provide a seamless and professional learning experience for students. This portal allows students to access subject-specific PDF notes categorized by classes (1-10) and educational boards (CBSE, ICSE, CHSE).
+Welcome to the **NEXT-GEN SCHOLARS Portal** (Nexara_Tution), a modern, React-based web application designed to provide a seamless and professional learning experience for students. This portal allows students to access subject-specific PDF notes categorized by classes (1-10) and educational boards (CBSE, ICSE, CHSE).
 
 ## 🌟 Features
 

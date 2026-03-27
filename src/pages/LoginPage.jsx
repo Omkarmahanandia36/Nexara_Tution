@@ -49,8 +49,8 @@ export default function LoginPage() {
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.7, ease: "easeOut" }}
         >
-          <div className="brand-logo">ST</div>
-          <h1 className="brand-title">Sovan Tuition</h1>
+          <div className="brand-logo">NGS</div>
+          <h1 className="brand-title">NEXT-GEN SCHOLARS</h1>
           <p className="brand-tagline">Empowering students with quality education from Class 1 to Class 10</p>
 
           <div className="brand-features">
@@ -86,7 +86,7 @@ export default function LoginPage() {
         >
           <div className="form-card">
             <div className="form-header">
-              <div className="form-logo">ST</div>
+              <div className="form-logo">NGS</div>
               <h2>Student Login</h2>
               <p>Enter your credentials to access your notes</p>
             </div>

@@ -169,7 +169,7 @@ export default function AdminPage() {
             </svg>
           </div>
           <div>
-            <div className="admin-header-title">Sovan Tuition</div>
+            <div className="admin-header-title">NEXT-GEN SCHOLARS</div>
             <div className="admin-header-sub">Admin Panel — PDF Manager</div>
           </div>
         </div>

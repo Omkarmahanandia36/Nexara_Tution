@@ -51,7 +51,7 @@ export default function WelcomePage() {
               transition={{ duration: 0.5 }}
             >
               <h2>Choose your role</h2>
-              <p>Select how you want to log in to Sovan Tuition</p>
+              <p>Select how you want to log in to NEXT-GEN SCHOLARS</p>
               
               <div className="role-cards">
                 <div 

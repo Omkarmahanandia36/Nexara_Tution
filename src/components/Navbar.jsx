@@ -16,9 +16,9 @@ export default function Navbar({ breadcrumbs = [] }) {
       <div className="navbar-inner container">
         {/* Logo */}
         <Link to="/" className="navbar-logo">
-          <div className="navbar-logo-icon">ST</div>
+          <div className="navbar-logo-icon">NGS</div>
           <div>
-            <div className="navbar-logo-title">Sovan Tuition</div>
+            <div className="navbar-logo-title">NEXT-GEN SCHOLARS</div>
             <div className="navbar-logo-sub">Learning Portal</div>
           </div>
         </Link>
